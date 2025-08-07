@@ -1,0 +1,7 @@
+Customer ID: 1001 --> Predicted Churn: 0 | Actual: 1
+Customer ID: 1002 --> Predicted Churn: 1 | Actual: 0
+Customer ID: 1005 --> Predicted Churn: 0 | Actual: 1
+Customer ID: 1006 --> Predicted Churn: 0 | Actual: 0
+Customer ID: 1007 --> Predicted Churn: 0 | Actual: 1
+Customer ID: 1008 --> Predicted Churn: 1 | Actual: 0
+Customer ID: 1009 --> Predicted Churn: 0 | Actual: 1
