@@ -44,3 +44,22 @@ def plot_correlation_matrix(df):
     plt.title('Correlation Matrix', fontsize=16)
     plt.savefig('feature/eda/correlation_matrix.png', bbox_inches='tight')
     plt.clf()
+
+def plot_churn_by_gender(df):
+    plt.figure(figsize=(6, 4))
+    sns.countplot(x='Gender', hue='Churn', data=df)
+    plt.title('Churn by Gender', fontsize=14)
+    plt.xlabel('Gender')
+    plt.ylabel('Count')
+    plt.savefig('feature/eda/churn_by_gender.png', bbox_inches='tight')
+    plt.clf()
+
+
+def plot_balance_vs_salary(df):
+    plt.figure(figsize=(6, 4))
+    sns.scatterplot(x='Balance', y='EstimatedSalary', hue='Churn', data=df, palette='coolwarm', alpha=0.7)
+    plt.title('Balance vs Estimated Salary by Churn', fontsize=14)
+    plt.xlabel('Balance')
+    plt.ylabel('Estimated Salary')
+    plt.savefig('feature/eda/balance_vs_salary.png', bbox_inches='tight')
+    plt.clf()

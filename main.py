@@ -3,7 +3,7 @@
 from database.mysqldb import connect_db, display_all_customers, insert_data_from_csv
 from scripts.data_loader import load_csv_data
 from scripts.data_cleaner import clean_data
-from scripts.eda import plot_churn_distribution, plot_age_distribution, plot_correlation_matrix
+from scripts.eda import plot_balance_vs_salary, plot_churn_by_gender, plot_churn_distribution, plot_age_distribution, plot_correlation_matrix
 from scripts.feature_engineering import one_hot_encode, scale_features
 from scripts.model_training import train_model
 
@@ -40,6 +40,8 @@ if __name__ == "__main__":
     plot_churn_distribution(df_clean)
     plot_age_distribution(df_clean)
     plot_correlation_matrix(df_clean)
+    plot_churn_by_gender(df_clean)
+    plot_balance_vs_salary(df_clean)
 
     # 4. Encode and scale
     df_encoded = one_hot_encode(df_clean)

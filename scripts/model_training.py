@@ -77,4 +77,22 @@ def train_model(df, model_name='random_forest', target_col='Churn'):
     plt.savefig(f'plots/{model_name}_churn_bar.png')
     plt.close()
 
+  # 7c. Scatter plot: Balance vs Estimated Salary
+    plt.figure(figsize=(6, 4))
+    scatter_palette = {0: "lightblue", 1: "salmon"}
+    plt.scatter(
+        X_test['Balance'],
+        X_test['EstimatedSalary'],
+        c=[scatter_palette[int(label)] for label in y_pred],  # Cast to int
+        alpha=0.7,
+        edgecolor='k'
+    )
+    plt.xlabel('Balance')
+    plt.ylabel('Estimated Salary')
+    plt.title(f'{model_name} - Balance vs Salary (Predicted Churn)')
+    plt.tight_layout()
+    plt.savefig(f'plots/{model_name}_scatter_balance_salary.png')
+    plt.close()
+
+
     return model
